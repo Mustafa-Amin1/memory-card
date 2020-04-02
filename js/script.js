@@ -159,7 +159,7 @@ function gameTimer() {
                 $('#endModal').modal('show')
             }, 1500);
         }
-    }, 1000);
+    }, 50);
 
 }
 //calculate Score
@@ -167,7 +167,7 @@ function calculateScore(lastCounter) {
     if (lastCounter >= 41 && lastCounter <= 60 || cardsRemovedArray.length == 8) {
         document.getElementById('score').innerText = "EXCELLENT";
         gameWinning();
-    } else if (lastCounter >= 21 && lastCounter <= 40 || cardsRemovedArray.length < 8 && cardsRemovedArray.length >= 4) {
+    } else if (lastCounter >= 21 && lastCounter <= 40 || cardsRemovedArray.length < 8 && cardsRemovedArray.length >= 6) {
         document.getElementById('score').innerText = "GOOD";
         gameWinning();
     } else {
@@ -193,8 +193,8 @@ var rateStars = Array.from(document.getElementsByClassName('rate'))
         if(rateStars[i]){
             rateStars[i].addEventListener('click', function () {
                 userRate = rateStars[i].value
-                if (rateStars[i].value <= this.value) {
                     for (let i = 0; i <= rateStars.length; i++) {
+                        if (rateStars[i].value <= this.value) {
                         rateStars[i].classList.add('checked')
                     }
                 }
