@@ -99,6 +99,9 @@ section #Cards{
 
 
 /* ending modal */
+.modal{
+  width: 100%;
+}
 .rate:hover{
   color: gold;
   cursor: pointer;
