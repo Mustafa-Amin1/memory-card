@@ -159,7 +159,7 @@ function gameTimer() {
                 $('#endModal').modal('show')
             }, 1500);
         }
-    }, 50);
+    }, 1000);
 
 }
 //calculate Score
