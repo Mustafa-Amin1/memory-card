@@ -117,11 +117,14 @@ section #Cards{
    max-width: 100%;
   }
 }
-@media (max-width:393px){
+@media only screen and (max-width: 1000px) {
   .game_controls{
     font-size: 30px;
   }
   .game_controls p{
+    display: block;
+  }
+  .game_controls span{
     display: block;
   }
 }
