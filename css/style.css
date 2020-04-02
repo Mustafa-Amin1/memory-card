@@ -1,0 +1,152 @@
+/* ===================== Start  global style ================= */
+body{
+    background-image: url(../images/pagebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto 0;
+}
+.container{
+    width: 86%;
+    margin: 0 auto;
+    padding: 10px;
+}
+body h1{
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: lightskyblue;
+}
+/* =====================End  global style ================= */
+.game_controls{
+  color:White;
+  font-size: 50px;
+  text-align: center;
+}
+.game_controls p{
+  display: inline-block
+}
+/* =====================Start flip card style ================= */
+
+section #Cards{
+    border:5px solid #282846;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.flip-card__item {
+    background-color: transparent;
+    height: 220px;
+    perspective: 1000px; 
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: none;
+  }
+  .similarity{
+    animation: similarity 2s ;
+  }
+  /* custom class */
+  .rotate {
+    transform: rotateY(180deg);
+  }
+  /* custom class */
+  .flip-card-inner p{
+   font-weight: bold;
+  }
+  .checked {
+    color: gold;
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10%;
+  }
+  
+  /* Style the front side  */
+  .flip-card-front {
+    background-image: url(../images/backface.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;    
+  }
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    position: relative;
+    animation: fear  .1s infinite;
+  }
+  .flip-card-back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+  }
+
+/* =====================End flip card style ================= */
+
+/* start modals styles */
+
+
+
+/* ending modal */
+.rate:hover{
+  color: gold;
+  cursor: pointer;
+}
+.contacts{
+  margin:20px 0;
+}
+/* End modals styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:757px){
+  .container{
+   width: 100%;
+   max-width: 100%;
+
+  }
+}
+@media (max-width:393px){
+  .game_controls{
+    font-size: 30px;
+  }
+  .game_controls p{
+    display: block;
+  }
+}
+
+@keyframes fear {
+  from {right: 0;}
+  to {right: 1;}
+}
+@keyframes similarity {
+  from {
+    /* position: absolute; */
+    transform: scale(1);
+  }
+  to {
+    /* position: absolute; */
+    transform: scale(1.2);
+  }
+}

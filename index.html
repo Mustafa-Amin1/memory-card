@@ -1,0 +1,206 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Memory Card Game</title>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <!--css files  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' href='./css/style.css'>
+  <!-- font family -->
+  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <section class="container">
+    <h1>Memory Card Game </h1>
+    <!-- start Game controls -->
+    <div class="row justify-content-around">
+      <div class="timer game_controls col-6">
+        <span>TIMER : </span>
+        <p id="timer">60</p>
+      </div>
+      <div class=" score game_controls col-6">
+        <span>SCORE : </span>
+        <p id="score"></p>
+      </div>
+    </div>
+    <!-- End Game controls -->
+    <section id="Cards">
+      <div class="container">
+        <div class="row">
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/js.png" alt='javascript'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/html5.png" alt='html5'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/angular.png" alt='angular'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/github.png" alt='github'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/angular.png" alt='angular'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/github.png" alt='github'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/html5.png" alt='html5'>
+              </section>
+            </section>
+          </section>
+          <section class="flip-card__item col-md-3 col-6  my-3">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+              </section>
+              <section class="flip-card-back">
+                <img src="./images/js.png" alt='javascript'>
+              </section>
+            </section>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- ===========================Start Modals============================= -->
+
+  <!-- Starting Modal -->
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Memory Card Game</h4>
+        </div>
+        <div class="modal-body">
+          <h3>Tools Used :</h3>
+          <ul>
+            <li>HTML/HTML5</li>
+            <li>CSS/CSS3</li>
+            <li>Javascript</li>
+            <li>JQuery</li>
+            <li>Bootstrap4</li>
+          </ul>
+          <h3>Description :</h3>
+          <ul>
+            <li>the objective is to collect the most pairs of cards.
+            </li>
+            <li>Shuffle the cards and face down, in rows.
+            </li>
+            <li>When a player turns over two cards that do not match, those cards are turned face down again (in the
+              same position)
+            </li>
+            <li>The trick is to remember which cards are where.
+            </li>
+            <li>The person with the most pairs at the end of the game wins.
+            </li>
+          </ul>
+        </div>
+
+        <div class="modal-footer">
+          <button onclick="startGame(event)" type="button" class="btn btn-success" data-dismiss="modal">Start
+            Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ending Modal -->
+  <div id="endModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Memory Card Game</h4>
+        </div>
+        <div class="modal-body">
+          <h3>Thank you ^_^</h3>
+          <p>Please Give me Rate and send me any suggetions</p>
+          <option class="fa fa-star rate" value="1"></option>
+          <option class="fa fa-star rate" value="2"></option>
+          <option class="fa fa-star rate" value="3"></option>
+          <option class="fa fa-star rate" value="4"></option>
+          <option class="fa fa-star rate" value="5"></option>
+
+          <div class="contacts">
+            <h5>CONTACT ME</h5>
+            <span> Email : <a href="mailto:mustafaelfarmawy@gmail.com "> mustafaelfarmawy@gmail.com </a>
+            </span>
+            </br>
+            <span> MOBILE : <a href="tel:01009914623"> +20 1009914623</a>
+
+            </span>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button onclick="playAgain()" type="button" class="btn btn-success" data-dismiss="modal">Play Again</button>
+          <button onclick="closeModal()" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===========================End Modals============================= -->
+
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
