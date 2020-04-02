@@ -125,7 +125,7 @@ section #Cards{
 
 @keyframes fear {
   from {right: 0;}
-  to {right: 1;}
+  to {right: 2;}
 }
 @keyframes similarity {
   from {
@@ -133,7 +133,6 @@ section #Cards{
     transform: scale(1);
   }
   to {
-    /* position: absolute; */
     transform: scale(1.2);
   }
 }
