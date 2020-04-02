@@ -125,7 +125,7 @@ section #Cards{
 
 @keyframes fear {
   from {right: 0;}
-  to {right: 2;}
+  to {right: 5;}
 }
 @keyframes similarity {
   from {
